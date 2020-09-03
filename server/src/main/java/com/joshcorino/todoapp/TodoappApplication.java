@@ -20,7 +20,7 @@ public class TodoappApplication {
 			Stream.of("Hacer las compras", "Limpiar el banio").forEach(name -> {
 				Todo todo = new Todo();
 				todo.setName(name);
-				todo.setDescription("ej");
+				todo.setDescription("Esta seria la descripcion");
 				repository.save(todo);
 			});
 			repository.findAll().forEach(System.out::println);

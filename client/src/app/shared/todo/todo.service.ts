@@ -4,11 +4,33 @@ import { Observable } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class TodoService {
+  // public API = '//localhost:8080';
+
 
   constructor(private http: HttpClient) {
   }
 
   getAll(): Observable<any> {
     return this.http.get('//localhost:8080/todo');
+  }
+
+  get(id: string) {
+
+    return this.http.get('//localhost:8080/todos/' + id);
+  }
+
+  save(todo: any): Observable<any> {
+    let result: Observable<Object>;
+    if (todo['href']) {
+      result = this.http.put(todo.href, todo);
+    } else {
+      result = this.http.post('//localhost:8080/todos/', todo);
+    }
+    return result;
+  }
+
+  remove(href: string) {
+    // return this.http.delete('//localhost:8080/todos/'+href);
+    return this.http.delete(href);
   }
 }

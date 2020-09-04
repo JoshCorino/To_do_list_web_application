@@ -11,18 +11,11 @@
     margin-left: 30px;
     font: 15px Arial, sans-serif;
 }
-/*mat-card{
-    height: auto;
-    margin-top: auto; 
-}
-mat-card-content{
-    height: auto;
-}*/
 .mat-list-item {
     height: auto;
     margin-bottom: 90px;    
 }
-/* mat-list{
-    height: auto;
-    margin-top: auto;    
-}  */
+
+.button_add {
+    left: 50%;
+}

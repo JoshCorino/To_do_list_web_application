@@ -1,0 +1,28 @@
+ .todo_card{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: auto;
+}
+.todo_name{
+    font: 20px Arial, sans-serif;
+}
+.todo_desc{
+    margin-left: 30px;
+    font: 15px Arial, sans-serif;
+}
+/*mat-card{
+    height: auto;
+    margin-top: auto; 
+}
+mat-card-content{
+    height: auto;
+}*/
+.mat-list-item {
+    height: auto;
+    margin-bottom: 90px;    
+}
+/* mat-list{
+    height: auto;
+    margin-top: auto;    
+}  */

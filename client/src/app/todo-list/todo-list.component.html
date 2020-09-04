@@ -1,14 +1,19 @@
-<mat-card>
-  <mat-card-title>Todo List</mat-card-title>
+<!-- <mat-card> -->
+  <!-- <mat-card-title>To do List</mat-card-title> -->
   <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let todo of todos">
-        <h3 mat-line>
-          <a mat-button [routerLink]="['/todo-edit', todo.id]">{{todo.name}}</a>
-        </h3>
+        <mat-card class="todo_card">
+          <h1 mat-line>
+            <a class="todo_name" mat-button [routerLink]="['/todo-edit', todo.id]">{{todo.name}}</a>
+          </h1>
+          <h3 mat-line>
+            <a class="todo_desc"  >{{todo.description}}</a>
+          </h3>
+        </mat-card>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
 
   <button mat-fab color="primary" [routerLink]="['/todo-add']">Add</button>
-</mat-card>
+<!-- </mat-card> -->

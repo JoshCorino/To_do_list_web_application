@@ -6,8 +6,15 @@
     <mat-card-content>
       <input type="hidden" name="href" [(ngModel)]="todo.href">
       <mat-form-field>
-        <input matInput placeholder="Todo Name" [(ngModel)]="todo.name"
+        <input matInput placeholder="Name" [(ngModel)]="todo.name"
                required name="name" #name>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <input type="hidden" name="href" [(ngModel)]="todo.href">
+      <mat-form-field>
+        <input matInput placeholder="Description" [(ngModel)]="todo.description"
+               required name="description" #description>
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions>

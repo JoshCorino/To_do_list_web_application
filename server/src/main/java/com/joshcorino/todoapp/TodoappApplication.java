@@ -18,6 +18,9 @@ import org.springframework.core.Ordered;
 @SpringBootApplication
 public class TodoappApplication {
 
+	private TodoRepository mongoRepository;
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(TodoappApplication.class, args);
 	}
@@ -48,4 +51,7 @@ public class TodoappApplication {
         return bean;
     }
 
+	public void databaseTest(){
+
+	}
 }

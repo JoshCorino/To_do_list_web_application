@@ -1,77 +1,18 @@
-<!-- <mat-card> -->
-  <!-- <mat-card-title>To do List</mat-card-title> -->
-  <!-- <mat-card-content>
-    <mat-list>
-      <mat-list-item *ngFor="let todo of todos">
+<mat-card-content>
+  <mat-list>
+    <mat-list-item *ngFor="let todo of todos">
         <mat-card class="todo_card">
           <h1 mat-line>
-            <a class="todo_name" mat-button [routerLink]="['/todo-edit', todo.id]">{{todo.name}}</a>
+            <a class="todo_name" mat-button [routerLink]="['/todo-edit', todo.id]">{{"Title: "}}{{todo.name}}</a>
           </h1>
-          <h3 mat-line>
-            <a class="todo_desc"  >{{todo.description}}</a>
-          </h3>
+          <h1 mat-line>
+            <a class="todo_desc">{{"Desc: "}}{{todo.description}}</a>
+          </h1>
+          <h1 mat-line>
+            <a class="todo_fold">{{"Cat: "}}{{todo.folder}}</a>
+          </h1>
         </mat-card>
-      </mat-list-item>
-    </mat-list>
-  </mat-card-content>
-
-  <button class="button_add"   mat-fab color="primary" [routerLink]="['/todo-add']">Add new</button> -->
-<!-- </mat-card> -->
-
- <mat-card-content>
-  <mat-list>
-    <ul *ngFor="let group of todos"> 
-      <li>{{group.folder}}</li>
-      <ul>
-        <mat-list-item *ngFor="let todo of todos" >
-          <mat-card class="todo_card">
-            <h1 mat-line>
-              <a class="todo_name" mat-button [routerLink]="['/todo-edit', todo.id]">{{todo.name}}</a>
-            </h1>
-            <h3 mat-line>
-              <a class="todo_desc"  >{{todo.description}}</a>
-            </h3>
-          </mat-card>
-        </mat-list-item>
-      </ul>
-    </ul>
-  </mat-list>
+    </mat-list-item>
+  </mat-list> 
 </mat-card-content>
-<button class="button_add"   mat-fab color="primary" [routerLink]="['/todo-add']">Add new</button>  
-<!-- <div *ngFor="let item in results">
-  <table>
-     <tr>
-        <th>ID</th>
-        <th>Name</th>
-     </tr>
-     <ng-container>
-       <tr>
-         <td colspan="2">{{item.name}}</td>
-       </tr>
-       <tr *ngFor="let value in item.values">
-         <td>{{value.id}}</td>
-         <td>{{value.name}}</td>
-       </tr>
-     </ng-container>
-  </table>
-<div> -->
-  <!-- <ul class="cert-result">
-    <li *ngFor="let folder of todos">
-      <span>{{folder.folder}}</span>
-
-      <table>
-        <tr *ngFor="let todo of todos" [ngForOf]="sampleObjects | groupBy: 'folder'">
-          <td>{{todo.name}}</td>
-          <td>{{todo.description}}</td>
-        </tr>
-  </table>
-    </li>
-  </ul> -->
-  <!-- <div class="row" *ngFor="let task of todos | groupBy: 'folder' | pairs">
-    <div>Group milestone name: {{task[0]}}</div>
-
-   <div class="row" *ngFor="let t of task[1]">
-      <div>Task: {{t}}</div>
-   </div>
-  </div>   -->
-<!-- <button class="button_add"   mat-fab color="primary" [routerLink]="['/todo-add']">Add new</button>  -->
+<button class="button_add" mat-raised-button color="primary" [routerLink]="['/todo-add']">Add new</button>

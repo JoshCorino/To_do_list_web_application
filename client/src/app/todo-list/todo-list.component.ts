@@ -9,14 +9,13 @@ import { AbstractFormGroupDirective } from '@angular/forms';
 })
 export class TodoListComponent implements OnInit {
   todos: Array<any>;
-  result:any[];
+  folderParts: Array<any>;
+  selected: String;
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
     this.todoService.getAll().subscribe(data => {
       this.todos = data;
     });
-
   }
-  
 }

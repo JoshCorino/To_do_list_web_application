@@ -1,0 +1,27 @@
+mat-card{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: auto;
+    background-color: rgb(253, 226, 226);
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 27, 27);
+}
+mat-form-field{
+    color: rgb(255, 27, 27);
+}
+
+.btn-delete{
+    background-color:  rgb(223, 130, 130);
+    color: white;
+}
+.btn-save{
+    background-color:  rgb(236, 65, 65);
+    color: white;
+}
+.btn-cancel{
+    background-color:  rgb(221, 179, 179);
+    color: white;
+    left: -7px;
+}

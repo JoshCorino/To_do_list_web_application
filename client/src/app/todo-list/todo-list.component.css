@@ -1,8 +1,12 @@
- .todo_card{
+.todo_card{
     width: 100%;
     margin-top: auto;
     margin-bottom: auto;
     height: auto;
+    background-color: rgb(253, 226, 226);
+}
+h1{
+    color: rgb(255, 27, 27);
 }
 .todo_name{
     font: 20px Arial, sans-serif;
@@ -11,11 +15,16 @@
     margin-left: 30px;
     font: 15px Arial, sans-serif;
 }
+.todo_fold{
+    margin-left: 30px;
+    font: 15px Arial, sans-serif;
+}
 .mat-list-item {
     height: auto;
-    margin-bottom: 90px;    
+    margin-bottom: 100px;    
 }
 
 .button_add {
-    left: 50%;
+    left: 45%;
+    background-color: rgb(236, 65, 65);
 }

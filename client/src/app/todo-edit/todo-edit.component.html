@@ -25,11 +25,11 @@
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit"
+      <button mat-raised-button class="btn-save" type="submit"
               [disabled]="!carForm.form.valid">Save</button>
-      <button mat-raised-button color="secondary" (click)="remove(todo.href)"
+      <button mat-raised-button class="btn-delete" (click)="remove(todo.href)"
               *ngIf="todo.href" type="button">Delete</button>
-      <a mat-button routerLink="/todo-list">Cancel</a>
+      <button mat-raised-button class="btn-cancel" routerLink="/todo-list">Cancel</button>
     </mat-card-actions>
 
   </form>

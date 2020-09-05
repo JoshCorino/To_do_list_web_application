@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 Q5="SET GLOBAL validate_password_policy=LOW;"
 Q1="CREATE DATABASE IF NOT EXISTS db_todo;"
@@ -10,9 +10,10 @@ SQL="${Q5}${Q1}${Q2}${Q3}${Q4}"
 
 sudo mysql -h localhost -u root -p -e "$SQL"
 
-cd server
-mvn spring-boot::run &
-cd ..
 cd client
 sudo npm install
 ng serve &
+cd ..
+cd server
+mvn spring-boot::run 
+

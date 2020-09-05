@@ -28,5 +28,9 @@ You can create a database and an user to use in Mysql with:
 * "CREATE USER 'SPRINGUSER'@'LOCALHOST' IDENTIFIED BY 'THEPASSWORD';"
 * "GRANT ALL ON *.* TO 'SPRINGUSER'@'LOCALHOST' IDENTIFIED BY 'THEPASSWORD';"
 
+When you run the script you need to put your linux password for sudo and after that, the password of root user of MySql.
+
+To stop the application press "cntrl + c" on the terminal
+
 Made by Joshua Corino.
 Contact: joshuc98@gmail.com

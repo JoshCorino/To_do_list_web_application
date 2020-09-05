@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../shared/todo/todo.service';
+import { AbstractFormGroupDirective } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-list',
@@ -8,12 +9,14 @@ import { TodoService } from '../shared/todo/todo.service';
 })
 export class TodoListComponent implements OnInit {
   todos: Array<any>;
-
+  result:any[];
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
     this.todoService.getAll().subscribe(data => {
       this.todos = data;
     });
+
   }
+  
 }

@@ -13,15 +13,18 @@ public class Todo {
     private Long id;
     private @NonNull String name;
     private String description;
+    private String folder;
 
-    public Todo(String name, String description){
+    public Todo(String name, String description, String folder){
         this.name=name;
         this.description=description;
+        this.folder=folder;
     }
 
     public Todo(){
         this.name="";
         this.description="";
+        this.folder="";
     }
 
     public Long getId() {
@@ -32,6 +35,14 @@ public class Todo {
         return description;
     }
 
+    public String getFolder() {
+        return folder;
+    }
+
+    public void setFolder(String folder) {
+        this.folder = folder;
+    }
+
     public String getName() {
         return name;
     }
@@ -39,7 +50,6 @@ public class Todo {
     public void setName(String name) {
         this.name = name;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }

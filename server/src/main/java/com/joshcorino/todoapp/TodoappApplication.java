@@ -18,7 +18,6 @@ import org.springframework.core.Ordered;
 @SpringBootApplication
 public class TodoappApplication {
 
-	private TodoRepository mongoRepository;
 
 
 	public static void main(String[] args) {
@@ -26,17 +25,12 @@ public class TodoappApplication {
 	}
 
 	@Bean
-	ApplicationRunner init(TodoRepository repository) {
+	ApplicationRunner init(TodoRepository todoRepository) {
 		return args -> {
-			Stream.of("Hacer las compras", "Limpiar el banio").forEach(name -> {
-				Todo todo = new Todo();
-				todo.setName(name);
-				todo.setDescription("Esta seria la descripcion");
-				repository.save(todo);
-			});
-			repository.findAll().forEach(System.out::println);
-		};
+            todoRepository.findAll().forEach(System.out::println);
+        };
 	}
+
     @Bean
     public FilterRegistrationBean<CorsFilter> simpleCorsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -51,7 +45,4 @@ public class TodoappApplication {
         return bean;
     }
 
-	public void databaseTest(){
-
-	}
 }
